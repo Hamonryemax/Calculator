@@ -12,23 +12,26 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <div type="text" id="scoreboard" class="scoreboard"></div>
-            <button data-input="0" class="button0 button">0</button>
-            <button data-input="1" class="button1 button">1</button>
-            <button data-input="2" class="button2 button">2</button>
-            <button data-input="3" class="button3 button">3</button>
-            <button data-input="4" class="button4 button">4</button>
-            <button data-input="5" class="button5 button">5</button>
-            <button data-input="6" class="button6 button">6</button>
+            <div type="text" id="scoreboard" class="scoreboard">0</div>
+            <button id="AC" class="button-additional">AC</button>
+            <button id="add-minus" class="button-additional">&#43&#8725-</button>
+            <button id="percent" class="button-additional">%</button>
+            <button data-operation="/" class="button-division button-operation">&#247</button>
             <button data-input="7" class="button7 button">7</button>
             <button data-input="8" class="button8 button">8</button>
             <button data-input="9" class="button9 button">9</button>
-            <button class="button-comma button">.</button>
-            <button data-calculate class="button-equals button">=</button>
-            <button data-operation="+" class="button-plus button">+</button>
-            <button data-operation="-" class="button-minus button">-</button>
-            <button data-operation="*" class="button-multiplication button">*</button>
-            <button data-operation="/" class="button-division button">/</button>
+            <button data-operation="*" class="button-multiplication button-operation">&#215</button>
+            <button data-input="4" class="button4 button">4</button>
+            <button data-input="5" class="button5 button">5</button>
+            <button data-input="6" class="button6 button">6</button>
+            <button data-operation="-" class="button-minus button-operation">&#8722</button>
+            <button data-input="1" class="button1 button">1</button>
+            <button data-input="2" class="button2 button">2</button>
+            <button data-input="3" class="button3 button">3</button>
+            <button data-operation="+" class="button-plus button-operation">&#43</button>
+            <button data-input="0" class="button0 button button-zero">0</button>
+            <button data-input="." class="button-comma button">.</button>
+            <button data-calculate class="button button-operation button-equals">=</button>
         </div>
     </div>
     <script src="calc.js"></script>

@@ -1,40 +1,122 @@
 body {
-    background-color: gray;
+    background-color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
 }
 
 .container {
     width: 100%;
     height: 100%;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;     
 }
 
 
 .calculator {
     justify-content: center;
     margin: auto;
-    margin-top: 70px;
-    background-color: blue;
+    margin-top: 30px;
+    background-color: black;
     text-align: center;
-    width: 400px;
+    width: 280px;
     height: 500px;
-    border-radius: 15px;
+    border-radius: 35px;
 }
 
 .scoreboard {
-    background-color: aliceblue;
-    width: 100%;
-    height: 100px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    display: flex;
+    background-color: black;
+    width: 250px;
+    height: 170px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    color: white;
+    font-size: 46px;
+    justify-content: end;
+    align-items: flex-end;
+    
 }
 
 .button {
     display: inline;
-    width: 65px;
-    height: 65px;
-    background-color: brown;
+    width: 50px;
+    height: 50px;
+    background-color: #313131;
     margin: 13px;
+    border-radius: 50%;
+    margin: 4px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    transition: background-color 150ms ease-in-out;
 }
 
-.green {
-    background-color: green;
+.button:active {
+    background-color: #5e5e5e;
 }
+
+.button-zero {
+    width: 111px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.button-operation {
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 13px;
+    border-radius: 50%;
+    margin: 4px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+}
+
+.button-additional {
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 13px;
+    border-radius: 50%;
+    margin: 4px;
+    border: none;
+    font-size: 20px;
+    transition: background-color 100ms ease-in-out;
+    background-color: #9f9f9f;
+    color: black;
+}
+
+.button-additional:active {
+    background-color: white;
+}
+
+.highlight {
+    transition-duration: 0.8s;
+    background-color: white;
+    color: orange;
+}
+
+.button-division {
+    font-size: 25px;
+}
+
+.button-equals {
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 13px;
+    border-radius: 50%;
+    margin: 4px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+}
+
+.button-equals:after {
+    background-color: #faa14e;
+}
+
