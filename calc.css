@@ -99,6 +99,12 @@ body {
     color: orange;
 }
 
+.non-highlight {
+    transition-duration: 0.8;
+    background-color: orange;
+    color: white;
+}
+
 .button-division {
     font-size: 25px;
 }
