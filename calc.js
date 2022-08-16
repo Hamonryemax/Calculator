@@ -19,7 +19,7 @@ const addMinus = document.getElementById('add-minus');
 const buttonAC = document.getElementById('AC');
 const scoreBoard = document.querySelector('.scoreboard');
 const container = document.querySelector('.calculator');
-let num1, num2, operator, result, commaTorF = false;
+let num1, num2, operator, result, commaTrueOrFalse = false;
 
 comma.addEventListener('click', getComma);
 container.addEventListener('click', handleContainerClick);
@@ -36,13 +36,14 @@ function addMinusForNumber() {
 }
 
 function reset() {
+    commaTrueOrFalse = false;
     if (num2 == undefined) {
         scoreBoard.innerHTML = '0';
-        num1 = undefined;
+        num1 = 0;
         buttonAC.innerHTML = 'AC';
     } else {
         scoreBoard.innerHTML = '0';
-        num2 = undefined;
+        num2 = 0;
         buttonAC.innerHTML = 'AC';
         if (operator !== undefined) {
             const prevOperatorButton = document.querySelector(`[data-operation="${operator}"]`);
@@ -75,7 +76,7 @@ function handleContainerClick(e) {
         scoreBoard.innerHTML += input;
     }
     if (target.dataset.hasOwnProperty('operation')) {
-        commaTorF = false;
+        commaTrueOrFalse = false;
         const { operation } = target.dataset;
         if (operator !== undefined) {
             const prevOperatorButton = document.querySelector(`[data-operation="${operator}"]`);
@@ -86,7 +87,7 @@ function handleContainerClick(e) {
         target.classList.add('highlight');
     }
     if (target.dataset.hasOwnProperty('calculate')) {
-        commaTorF = false;
+        commaTrueOrFalse = false;
         if (result !== undefined) {
             result = calculator[operator](result, num2);
             scoreBoard.innerHTML = result;
